@@ -1,0 +1,9 @@
+.box{
+    width: 100%;
+    padding: 25px;
+    background: rgb(44,121,201);
+    background: linear-gradient(180deg, rgba(44,121,201,1) 35%, rgba(26,138,132,1) 100%); 
+    border-radius: 20px;
+    height: 100%;
+    min-height: 200px;
+}

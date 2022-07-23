@@ -1,0 +1,103 @@
+html,
+body,
+#__next {
+  height: 100%;
+}
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+@font-face {
+  font-family: ProfontWindows;
+  src: url(../font/Profontwindows-axBMx.ttf);
+}
+
+@font-face {
+  font-family: ProfontWindows;
+  font-weight: bold;
+  src: url(../font/ProfontwindowsBold-Eaq14.ttf);
+}
+
+body{
+  background-image: url(../public/images/bg.png);
+  background-size: cover;
+  font-family: ProfontWindows;
+  color: #fff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+a{
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+}
+
+ul{
+  padding: 0;
+  list-style: none;
+}
+
+button.btn, button.btn:focus, button.btn:active{
+  box-shadow: none;
+}
+
+.text-custom{
+  background-color: #2ccdc3;
+  color: #fff;
+  border-radius: 2px;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+input{
+  width: 100%;
+}
+
+input:focus{
+  box-shadow: 0 1px 1px #2ccdc3 inset, 0 0 5px #2ccdc3;
+  outline: 0 none;
+}
+
+.btn_add{
+  width: unset;
+  padding: 3px 10px;
+}
+
+.btn-remove{
+  cursor: pointer;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

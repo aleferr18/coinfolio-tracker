@@ -1,0 +1,151 @@
+.header_top{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 0 10px 0;
+    align-items: center;
+}
+
+.header_top ul li{
+    display: inline-block;
+}
+
+.header_top ul li:not(.li_logout):first-child{
+    margin-right: 35px;
+    position: relative;
+}
+
+.header_top ul li:first-child button{
+    color: #fff;
+}
+
+.header_top ul li:first-child button:hover{
+    color: rgb(174, 174, 174);
+}
+
+.header_top ul li:last-child button{
+    color: #2ccdc3;
+}
+
+.header_top ul li:last-child button:hover{
+    color: #24aaa1;
+}
+
+.header_top ul li:not(.li_logout)::after{
+    content: "";
+    display: block;
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #fff;
+}
+
+.header{
+    height: 120px;
+}
+
+#logo, #logo image{
+    height: auto;
+    width: 80px;
+    display: flex;
+    align-items: center
+}
+
+#logo_title {
+    color: #fff;
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 60px;
+    margin-bottom: 0;
+}
+
+.nav{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav ul{
+    margin-bottom: 0;
+}
+
+.nav ul li{
+    display: inline-block;
+}
+
+.nav ul li:not(:first-child){
+    margin-left: 25px;
+}
+
+.nav ul li a{
+    font-size: 30px;
+    color: #fff;
+}
+
+.nav ul li button.a:hover, .nav ul li a.active{
+    color:#2ccdc3;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.menu_responsive{
+    display: none;
+}
+
+@media (max-width: 600px){
+
+    #logo_title{
+        font-size: 35px;
+    }
+
+    .menu_responsive{
+        position: fixed;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: #111111;
+        top:0;
+        left: 0;
+        right:0;
+        bottom: 0;
+        z-index: 999;
+        transform: translateX(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s ease-in-out;
+    }
+
+    .menu_responsive.active{
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0%);
+    }
+
+    #logo{
+        width: 70px;
+        display: flex;
+        align-items: center;
+    }
+
+    #logo_menu{
+        width: 30px;
+        height: auto;
+        cursor: pointer;
+        fill: #fff;
+    }
+
+    .btn_close{
+        font-size: 25px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #fff;
+    }
+}
